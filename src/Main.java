@@ -2,49 +2,52 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //      Первое число
-        // запрос
-        System.out.print("Введите a: ");
-        Scanner ain = new Scanner (System.in);
-        //присвоение
-        double a = ain.nextDouble();
-
-        //      Второе число
-        //запрос
-        System.out.print("Введите b: ");
-        Scanner bin = new Scanner (System.in);
-        //присвоение
-        double b = bin.nextDouble();
-
+        double c=0;
         //      Действие
+        //пример
+        System.out.println("1. a + b = ?");
+        System.out.println("2. a * b = ?");
+        System.out.println("3. a / b = ?");
+        System.out.println("4. a - b = ?");
+        System.out.println("5. ax² + bx + c = 0      x-?");
         //запрос
         System.out.print("Введите номер действия: ");
         Scanner input3 = new Scanner (System.in);
         int znak = input3.nextInt();
-        //отступ
-        System.out.println("");
+
+        //      Первое число
+        System.out.print("Введите a: ");
+        Scanner ain = new Scanner (System.in);
+        double a = ain.nextDouble();
+        //      Второе число
+        System.out.print("Введите b: ");
+        Scanner bin = new Scanner (System.in);
+        double b = bin.nextDouble();
+        if (znak==5) {//      Третье число (если уравнение)
+            System.out.print("Введите c: ");
+            Scanner cin = new Scanner(System.in);
+            c = cin.nextDouble();
+        }
+
+        //      Решение
         //сложение
         if(znak==1){
-            System.out.print("Сумма чисел: " + (a + b));
+            System.out.print("a + b = " + (a + b));
         }
         //умножение
         else if(znak==2){
-            System.out.print("Произведение чисел: " + (a * b));
+            System.out.print("a * b = " + (a * b));
         }
         //деление
         else if(znak==3){
-            System.out.print("Частное чисел: " + (a / b));
+            System.out.print("a / b = " + (a / b));
         }
         //вычитание
         else if(znak==4){
-            System.out.print("Разность чисел: " + (a - b));
+            System.out.print("a - b " + (a - b));
         }
         //квадратное уравнение
         else if(znak==5){
-            System.out.print("Введите c: ");
-            //ввод c
-            Scanner cin = new Scanner (System.in);
-            double c = cin.nextDouble();
             //решение уравнения
             double d = b * b - 4 * a * c;
             if (d > 0){
