@@ -12,21 +12,21 @@ public class Main {
         System.out.println("5. ax² + bx + c = 0      x-?");
         //запрос
         System.out.print("Введите номер действия: ");
-        Scanner input3 = new Scanner (System.in);
-        int znak = input3.nextInt();
+        Scanner input = new Scanner (System.in);
+        int znak = input.nextInt();
 
         //      Первое число
         System.out.print("Введите a: ");
-        Scanner ain = new Scanner (System.in);
-        double a = ain.nextDouble();
+        //Scanner ain = new Scanner (System.in);
+        double a = input.nextDouble();
         //      Второе число
         System.out.print("Введите b: ");
-        Scanner bin = new Scanner (System.in);
-        double b = bin.nextDouble();
+        //Scanner bin = new Scanner (System.in);
+        double b = input.nextDouble();
         if (znak==5) {//      Третье число (если уравнение)
             System.out.print("Введите c: ");
-            Scanner cin = new Scanner(System.in);
-            c = cin.nextDouble();
+            //Scanner cin = new Scanner(System.in);
+            c = input.nextDouble();
         }
 
         //      Решение
